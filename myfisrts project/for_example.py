@@ -3,8 +3,6 @@
 try:
     numer_to = int(input("Ingresa un numero: "))
 
-    numer_to = numer_to
-
     # 0 -> 1
     # 1 -> 2
     # 2 -> 3
@@ -14,8 +12,17 @@ try:
 # Tablas de multiplicar del 1 al numero ingresado por el usuario, ademas el usuario no debe ingresar
 # numeros mayores 10
 
-    for i in range(1, 11, 1):
-        print(i, "*", numer_to, "=", i * numer_to)
+    if numer_to < 11:
+        for j in range (1, numer_to + 1, 1):
+            print("------------------")
+            for i in range(1, 11, 1):
+                if i == 10:
+                    print("|", j, " * ", i, "  = ", i * j)
+                else:
+                    print("|", j, " * ", i, "  =  ", i * j)
+            print("------------------")
+    else:
+        print("EL numero no es valido")
 except:
     print("EL valor ingresado no es valido")
 
